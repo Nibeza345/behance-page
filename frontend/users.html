@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="../css/styles.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Users</title>
+  <style>
+    table{
+      border-collapse: collapse;
+      width: 50%;
+      height: 2rem;
+    }
+    tr,
+    th,
+    td {
+      height: 2.5rem;
+      border: 1px solid black;
+      padding: 1rem;
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>All Users</h1>
+  <button id="show">Show</button>
+  <table id="userTable">
+    <tr>
+      <th>ID</th>
+      <th>UserName</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Select</th>
+    </tr>
+    <tbody>
+
+    </tbody>
+  </table>
+  <button>Delete</button>
+  <!-- <div id="user-table-container">
+    <table id="user-table">
+      <thead>
+        <tr>
+            <th>id</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th> <button id="delete-users-button">Delete</button></th>
+
+        </tr>
+      </thead>
+      <tbody id="user-table-body"></tbody>  
+    </table>
+    <div id="pagination-container"></div>
+  </div> -->
+  <form id="edit-form">
+    <label for="edit-name">Username:</label>
+    <input type="text" id="edit-name" name="username" required>
+    <label for="edit-email">Email</label>
+    <input type="email" name="email" id="edit-email" required>
+    <label for="edit-password">Password:</label>
+    <input type="password" id="edit-password" name="password" required>
+    <button type="submit" id="submit">Save</button>
+  </form>
+
+  <script src="../js/users.js"></script>
+</body>
+
+</html>
