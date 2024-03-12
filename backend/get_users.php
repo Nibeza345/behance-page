@@ -1,5 +1,5 @@
 <?php
-// Establish database connection
+
 $host = "localhost";
 $username = "root";
 $password = "";
@@ -19,8 +19,8 @@ $result = mysqli_query($conn, $query);
 $users = array();
  while($row =$result->fetch_assoc())
    $users[] = $row;
+  echo json_encode($users);
 
-   echo json_encode($users);
 
 $conn->close();
 ?>

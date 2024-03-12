@@ -1,5 +1,4 @@
 <?php
-// Establish database connection
 $host = "localhost";
 $username = "root";
 $password = "";
@@ -11,20 +10,22 @@ if ($conn->connect_error) {
 }
 
 header('Content-type: application/json');
-// Get signup data
-$username = $_POST['edit-name'];
-$password = $_POST['edit-email'];
-$email = $_POST['edit-password'];
 
-// Insert the user into the database
-$sql = "INSERT INTO project1(username, email, password) VALUES('$username', '$email', '$password')";
+$username = $_POST['username'];
+echo $username;
+$email = $_POST['email'];
+echo $email;
+$password = $_POST['password'];
+echo $password;
+
+$sql = "UPDATE project1 SET username = $username, email = $email, password = $password";
 $result= mysqli_query($conn , $sql);
 
 if ($result) {
   echo json_encode("successful");
 } else {
     echo  json_encode("failed");
-//   echo "Error: " . $sql . "<br>" . $conn->error;
+
 }
 
 $conn->close();
